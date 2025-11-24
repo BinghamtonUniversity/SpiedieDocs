@@ -3,6 +3,7 @@ title: Spiedie Documentation Index
 layout: default 
 images: []
 tags: []
+nav_exclude: true
 description: Welcome to Spiedie and Binghamton University. Glance through here to learn about computer clusters and Spiedie's computing capabilities. 
 ---
 

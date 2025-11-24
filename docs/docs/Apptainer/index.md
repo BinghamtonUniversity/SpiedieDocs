@@ -1,0 +1,42 @@
+---
+title: Apptainer on Spiedie
+layout: default
+images: []
+description: A set of tutorials to get you up and running with spiedie.
+tags: [Singularity, Apptainer, containers, docs]
+nav_exclude: true
+---
+
+## <a name="">What is Apptainer?</a>
+
+Apptainer, formerly known as Singularity, is a containerization solution developed by Lawrence Berkley National Laboratory and Sylabs. It is speciafically designed for scientific and high-performance computing environments that allows users to run their own unique environments in different resources (such as Spiedie). 
+
+The entire execution environment is contained within a single file, called as an image. It can contained a base Llinux File system, libraries, data, and scripts required to run a specific program. 
+
+
+## <a name="">Why use Apptainer?</a>
+
+With Apptainer, a user can design and test their program in their local environemnt with higher privilages (i.e. sudo), create a container, transport the container onto Spiedie and run their experiment at a much larger scale. 
+
+Users can generate their own container images, use a docker image, or download an image off of the Apptainer hub.
+
+
+## <a name="">Get Started with Apptainer</a>	
+
+1. <a href="install-apptainer.html">Install Apptainer </a>
+2. <a href="create-image.html">Create a container image</a>
+    * <a href="sylab-cloud.html">Create a container on sylab cloud</a>
+3. <a href="apptainer-commands.html">Usage</a>
+
+## Guided Tutorials
+
+1. <a href="../tutorials/spiedie_apptainer.html">Running a sample program on Spieide with Apptainer </a> 
+
+## Apptainer Recipe Hub
+
+<a href="recipe-hub.html">Download the pre-tested apptainer recipes to build containers quickly and efficiently</a>
+
+## External Links
+
+<a href="" target="_blank"></a>
+<a href="" target="_blank"></a>

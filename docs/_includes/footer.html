@@ -1,0 +1,36 @@
+<footer class="row">
+  <div class="col-sm-12">
+    <!-- Footer content, copyright -->
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/sidebarToggle.js' | relative_url }}" defer></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+<script src="{{ '/assets/js/jquery.autocomplete.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/navigation.js' | relative_url }}" defer></script>
+
+<script>
+  var docs_arr = [
+    {% for page in site.pages %}
+      {% if page.dir == "/tutorials/" %}
+        {
+          "url": "{{ page.url }}",
+          "value": {% if page.title %} "{{ page.title }}" {% else %} "{{ page.name }}" {% endif %}
+        },
+      {% endif %}
+    {% endfor %}
+    {% for tag in all_tags %}
+      {
+        "url": "/tags#{{ tag | slugify }}",
+        "value": "{{ tag }}"
+      },
+    {% endfor %}
+  ];
+  $('.docs_search').autocomplete({
+    lookup: docs_arr,
+    onSelect: function (suggestion) {
+      window.location = "{{ site.url }}" + suggestion.url;
+    }
+  });
+</script>

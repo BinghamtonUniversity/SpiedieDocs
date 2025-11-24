@@ -2,6 +2,7 @@
 title: Obtaining Access to Spiedie
 layout: default
 images: []
+nav_exclude: true
 tags: [Login, Setup, Configuration, New_User]
 description: How to obtain an account on the Spiedie Cluster.
 ---
@@ -11,11 +12,26 @@ description: How to obtain an account on the Spiedie Cluster.
 
 ### Table of Contents  
 
- 1. [Yearly subscription access](#yearly)  
- 2. [Condo Access](#condo)
+ 1. [Subsidized Cluster Access](#subsidized)
+ 2. [Yearly Subscription Access](#yearly)  
+ 3. [Condo Access](#condo)
 
 ***
 
+## <a name="subsidized"></a>Subsidized Access to the Spiedie Cluster
+
+
+* Maximum of 24 cores per faculty group
+* The queue is limited to a maximum of 250 cores
+* Storage is monitored
+* Higher priority queues have precedence
+* 122 hr wall time
+
+**Application must be filled out by supporting faculty**
+
+<a href="https://docs.google.com/a/binghamton.edu/forms/d/e/1FAIpQLSe3VQGT37cE1wC1IHz9sQDasEgna2JYqpjLTCFUSOAu5SlCUQ/viewform?usp=sf_link" target="_blank">Access application</a>
+
+***
 
 ## <a name="yearly"></a> Yearly Subscription Access
 
@@ -26,7 +42,7 @@ description: How to obtain an account on the Spiedie Cluster.
 * 122 hr wall time
 * Per research group access
 
-**Application miust be filled out by supporting faculty**
+**Application must be filled out by supporting faculty**
 
 <a href="https://goo.gl/forms/EKbW3DUSoasTuphu1" target="_blank" >Subscription application</a>
 

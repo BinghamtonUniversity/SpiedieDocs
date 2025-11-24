@@ -1,6 +1,10 @@
 ---
 title: "Welcome to Spiedie Docs!"
 layout: default
+images: []
+tags: []
+nav_exclude: true
+description: Welcome to Spiedie and Binghamton University. Glance through here to learn about computer clusters and Spiedie's computing capabilities. 
 ---
 
 <div id="about-section">
@@ -16,17 +20,40 @@ layout: default
     This research facility offers computer capabilities for researchers across 
     Binghamton University.
 </div>
-<h2><a href="tutorials/">Guided Tutorials</a></h2>
+<h2><a href="{{ '/docs/HPC-Operations' | relative_url }}">HPC Details and Operations</a></h2>
 
 <hr>
 <div class="card-container">
     {% assign i = 0 %}
     {% for mypage in site.pages %}
-    {% if mypage.dir == "/tutorials/" %}
+    {% if mypage.dir == "/docs/HPC-Operations/" and mypage.nav_exclude != true %}
     {% if  i < 3 %}
     {% assign i = i | plus:1 %}
     <div class="card-info">
-        <a class="card" href="{{ site.url }}{{ mypage.url }}" style="margin-bottom:20px;">
+        <a class="card" href="{{ mypage.url | relative_url }}" style="margin-bottom:20px;">
+            <div class="card-body">
+                <h3 class="card-title">{{ mypage.title }}</h3>
+                <p class="card-text">{{ mypage.description | mypage.content | strip_html   }} ...</p>
+            </div>
+        </a>
+    </div>
+
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</div>
+
+<h2><a href="{{ '/docs/Tutorials' | relative_url }}">Guided Tutorials</a></h2>
+
+<hr>
+<div class="card-container">
+    {% assign i = 0 %}
+    {% for mypage in site.pages %}
+    {% if mypage.dir == "/docs/Tutorials/" and mypage.nav_exclude != true %}
+    {% if  i < 3 %}
+    {% assign i = i | plus:1 %}
+    <div class="card-info">
+        <a class="card" href="{{ mypage.url | relative_url }}" style="margin-bottom:20px;">
             <div class="card-body">
                 <h3 class="card-title">{{ mypage.title }}</h3>
                 <p class="card-text">{{ mypage.description | mypage.content | strip_html   }} ...</p>
@@ -39,20 +66,20 @@ layout: default
     {% endfor %}
 </div>
 <div class="more-info">
-    <a href="{{ site.url }}/tutorials" class="badge badge-primary float-right">Click For More Tutorials</a>
+    <a href="{{ '/docs/Tutorials' | relative_url }}" class="badge badge-primary float-right">Click For More Tutorials</a>
 </div>
 
-<h2> <a href="docs/">Documentation</a> </h2>
+<h2> <a href="{{ '/docs/How-to-Use-Spiedie' | relative_url }}">Documentation</a> </h2>
 
 <hr>
 <div class="card-container">
     {% assign i = 0 %}
     {% for mypage in site.pages %}
-    {% if mypage.dir == "/docs/" %}
+    {% if mypage.dir == "/docs/How-to-Use-Spiedie/" and mypage.nav_exclude != true %}
     {% if  i < 6 %}
     {% assign i = i | plus:1 %}
     <div class="card-info">
-        <a class="card" href="{{ site.url }}{{ mypage.url }}" style="margin-bottom:20px;">
+        <a class="card" href="{{ mypage.url | relative_url }}" style="margin-bottom:20px;">
             <div class="card-body">
                 <h3 class="card-title">{{ mypage.title }}</h3>
                 <p class="card-text">{{ mypage.description | mypage.content | strip_html   }} ...</p>
@@ -65,21 +92,21 @@ layout: default
 
 </div>
 <div class="more-info">
-    <a href="{{ site.url }}/docs" class="badge badge-primary float-right">Click For More Docs</a>
+    <a href="{{ '/docs/' | relative_url }}" class="badge badge-primary float-right">Click For More Docs</a>
 </div>
 
-<h2> <a href="singularity/">Singularity on Spiedie</a> </h2>
+<h2> <a href="{{ '/docs/Apptainer' | relative_url }}">Apptainer on Spiedie</a> </h2>
 
 <hr>
 <div class="card-container">
     {% assign i = 0 %}
 
     {% for mypage in site.pages %}
-    {% if mypage.dir == "/singularity/"  %}
+    {% if mypage.dir == "/docs/Apptainer/" and mypage.nav_exclude != true %}
     {% if  i < 3 %}
     {% assign i = i | plus:1 %}
     <div class="card-info">
-        <a class="card" href="{{ site.url }}{{ mypage.url }}" style="margin-bottom:20px;">
+        <a class="card" href="{{ mypage.url | relative_url }}" style="margin-bottom:20px;">
             <div class="card-body">
                 <h3 class="card-title">{{ mypage.title }}</h3>
                 <p class="card-text">{{ mypage.description | mypage.content | strip_html   }} ...</p>
@@ -92,6 +119,6 @@ layout: default
 
 </div>
 <div class="more-info">
-    <a href="{{ site.url }}/singularity" class="badge badge-primary float-right">Click For More Info</a>
+    <a href="{{ site.url }}/docs/Apptainer" class="badge badge-primary float-right">Click For More Info</a>
 </div>
 
