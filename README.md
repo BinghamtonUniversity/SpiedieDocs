@@ -46,7 +46,6 @@ Like with most Jekyll-built sites:
 
 # Known Problems
 
-1. The search bar doesn't work for the current version of SpiedieDocs-DEV!
-2. Since moving over, some links to other SpiedieDocs pages might be dead.
-3. Some content is outdated
-4. From trials and testing, some useless and unreferenced includes and html files might exist in the "/docs" directory.
+1. Since moving over, some links to other SpiedieDocs pages might be dead.
+2. Some content is outdated
+3. From trials and testing, some useless and unreferenced includes and html files might exist in the "/docs" directory.
