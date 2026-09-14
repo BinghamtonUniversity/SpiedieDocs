@@ -18,7 +18,7 @@ description: How to obtain an account on the Spiedie Cluster.
 
 ## <a name="yearly"></a> Yearly Subscription Access
 
-* $1,536.51/year, faculty research group
+* $1,500.14/year, faculty research group
 * Queued ahaed of lower priority jobs
 * Fair-shair queue enabled
 * Storage is monitored
